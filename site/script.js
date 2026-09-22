@@ -1,11 +1,91 @@
 const categories = [
-  {name:'Breakfast',desc:'Maggi, parathas, sandwiches, pakodas and morning favourites.'},
-  {name:'Chinese Combo & Soya Chaap',desc:'Manchurian, fried rice, noodles and flavour-packed chaap.'},
-  {name:'Starters',desc:'Noodles, spring rolls, pasta, chilli potato and Manchurian.'},
-  {name:'MFC Special Signature',desc:'Kati Kabab and Kati Kabab with Rumali Roti.'},
-  {name:'Premium Special Thalis',desc:'Ghar Ki Thali and Special Festive Thali.'},
-  {name:'North Indian Specialties',desc:'Dal, paneer, kofta, chole, aloo, mushroom and more.'},
-  {name:'Rice, Soup & Raita',desc:'Plain rice, jeera rice, pulao and biryani.'}
+  {
+    name: 'Breakfast',
+    desc: 'Maggi, parathas, sandwiches, pakodas and morning favourites.',
+    icon: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 10h16"/>
+        <path d="M5 10v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/>
+        <path d="M7 6h10"/>
+        <path d="M9 3v3"/>
+        <path d="M15 3v3"/>
+      </svg>`
+  },
+
+  {
+    name: 'Chinese Combo & Soya Chaap',
+    desc: 'Manchurian, fried rice, noodles and flavour-packed chaap.',
+    icon: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 4l7 7"/>
+        <path d="M12 11l7-7"/>
+        <path d="M12 11l-2 10"/>
+        <path d="M12 11l2 10"/>
+        <path d="M7 8l3-3"/>
+        <path d="M17 8l-3-3"/>
+      </svg>`
+  },
+
+  {
+    name: 'Starters',
+    desc: 'Noodles, spring rolls, pasta, chilli potato and Manchurian.',
+    icon: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 5c4 3 10 3 14 0"/>
+        <path d="M5 5c0 8 3 13 7 13s7-5 7-13"/>
+        <path d="M8 9h8"/>
+        <path d="M9 13h6"/>
+      </svg>`
+  },
+
+  {
+    name: 'MFC Special Signature',
+    desc: 'Kati Kabab and Kati Kabab with Rumali Roti.',
+    icon: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 18h16"/>
+        <path d="M6 15c2-5 10-5 12 0"/>
+        <path d="M8 12c1-3 7-3 8 0"/>
+        <path d="M12 4v4"/>
+        <path d="M9 6h6"/>
+      </svg>`
+  },
+
+  {
+    name: 'Premium Special Thalis',
+    desc: 'Ghar Ki Thali and Special Festive Thali.',
+    icon: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="8"/>
+        <circle cx="8" cy="10" r="1.2"/>
+        <circle cx="15" cy="9" r="1.2"/>
+        <circle cx="13" cy="14" r="1.2"/>
+        <path d="M6 16h12"/>
+      </svg>`
+  },
+
+  {
+    name: 'North Indian Specialties',
+    desc: 'Dal, paneer, kofta, chole, aloo, mushroom and more.',
+    icon: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 12h16"/>
+        <path d="M6 12a6 6 0 0 0 12 0"/>
+        <path d="M8 8c1-2 7-2 8 0"/>
+        <path d="M12 4v2"/>
+      </svg>`
+  },
+
+  {
+    name: 'Rice, Soup & Raita',
+    desc: 'Plain rice, jeera rice, pulao and biryani.',
+    icon: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 10h14"/>
+        <path d="M6 10c0 5 2 8 6 8s6-3 6-8"/>
+        <path d="M8 6c1-2 2-2 3 0s2 2 3 0 2-2 3 0"/>
+      </svg>`
+  }
 ];
 
 const menu = {
@@ -32,8 +112,37 @@ const menu = {
   ]
 };
 
-const categoryGrid=document.getElementById('categoryGrid');
-categoryGrid.innerHTML=categories.map((c,i)=>`<article class="category-card" data-category="${c.name}"><div class="cat-image menu-cat-image"><span>${String(i+1).padStart(2,'0')}</span></div><div class="cat-body"><span>${Object.keys(menu[c.name]).length || menu[c.name].length} dishes • Category</span><h3>${c.name}</h3><p>${c.desc}</p></div></article>`).join('');
+const categoryGrid = document.getElementById('categoryGrid');
+
+categoryGrid.innerHTML = categories.map((c, i) => `
+  <article class="category-card" data-category="${c.name}">
+
+    <div class="cat-image">
+
+      <span class="cat-number">
+        ${String(i + 1).padStart(2, '0')}
+      </span>
+
+      <div class="cat-icon">
+        ${c.icon}
+      </div>
+
+      <span class="cat-view">
+        Explore menu ↗
+      </span>
+
+    </div>
+
+    <div class="cat-body">
+
+      <h3>${c.name}</h3>
+
+      <p>${c.desc}</p>
+
+    </div>
+
+  </article>
+`).join('');
 
 const dishGrid=document.getElementById('dishGrid');
 function dishCards(category){
