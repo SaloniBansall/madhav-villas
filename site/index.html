@@ -1,605 +1,341 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Madhav Food Caters | Madhav Villas, Mathura</title>
-  <meta name="description" content="Madhav Food Caters at Madhav Villas, NH-2 near Rajive Academy, Mathura. Dine-in, takeaway and room stays available." />
-  <meta name="theme-color" content="#17110c" />
+  <meta name="description" content="Madhav Food Caters at Madhav Villas, NH-2 near Rajive Academy, Mathura. Dine-in, takeaway and room stays available.">
+  <meta name="theme-color" content="#2b211c">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header" id="top">
-    <div class="container nav">
-      <a class="brand" href="#home">
-        <span class="brand-mark">MF</span>
-        <span><strong>Madhav Food Caters</strong><small>at Madhav Villas • Mathura</small></span>
-      </a>
-      <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#experience">Dine In</a>
-        <a href="#takeaway">Take Away</a>
-        <a href="#menu">Menu</a>
-        <a href="#stay">Stay</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn-small" href="#stay">Rooms</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <img class="hero-image" src="assets/restaurant-hero.jpg" alt="Madhav Food Caters restaurant at night" />
-      <div class="hero-overlay"></div>
-      <div class="hero-glow"></div>
-      <div class="container hero-content">
-        <p class="eyebrow">MADHAV VILLAS • MATHURA</p>
-        <h1>Madhav Food<br><em>Caters</em></h1>
-        <p class="hero-copy">Brij ka swad, served with warmth. Dine in, take away, or order your favourites online.</p>
-        <div class="hero-actions">
-          <a class="btn btn-gold" href="#experience">Dine In</a>
-          <a class="btn btn-ghost" href="#takeaway">Take Away</a>
-        </div>
-        <div class="hero-meta"><span>● Open for Dine-in</span><span>● Takeaway Available</span><span>● Zomato</span></div>
-      </div>
-      <a class="scroll-cue" href="#experience">Explore ↓</a>
-    </section>
-
-    <section class="experience section" id="experience">
-      <div class="container">
-        <div class="section-head centered">
-          <p class="eyebrow">Choose your experience</p>
-          <h2>Eat here. Take it with you. Stay awhile.</h2>
-          <p>One destination for food and a comfortable stay on NH-2.</p>
-        </div>
-        <div class="experience-grid">
-          <a class="experience-card dine" href="#menu">
-            <span class="card-number">01</span>
-            <div><p class="eyebrow">Restaurant</p><h3>Dine In</h3><p>Enjoy a freshly prepared meal at Madhav Food Caters.</p></div>
-            <span class="arrow">↗</span>
-          </a>
-          <a class="experience-card take" href="#takeaway">
-            <span class="card-number">02</span>
-            <div><p class="eyebrow">On the go</p><h3>Take Away</h3><p>Pick up your favourites or order online through Zomato.</p></div>
-            <span class="arrow">↗</span>
-          </a>
-          <a class="experience-card stay-card" href="#stay">
-            <span class="card-number">03</span>
-            <div><p class="eyebrow">Madhav Villas</p><h3>Stay With Us</h3><p>Comfortable rooms with AC and attached washroom.</p></div>
-            <span class="arrow">↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="takeaway section dark" id="takeaway">
-      <div class="container takeaway-grid">
-        <div class="takeaway-copy">
-          <p class="eyebrow">Take Away • Online Order</p>
-          <h2>Your favourites,<br><em>wherever you are.</em></h2>
-          <p>Browse the menu, choose what you want, and order Madhav Food Caters through Zomato.</p>
-          <a class="btn btn-gold" href="YOUR_ZOMATO_LINK_HERE" target="_blank" rel="noopener">Order on Zomato ↗</a>
-          <p class="small-note">Replace <strong>YOUR_ZOMATO_LINK_HERE</strong> in the code with your actual Zomato restaurant link.</p>
-        </div>
-        <div class="takeaway-image-wrap">
-          <img src="assets/restaurant-hero.jpg" alt="Madhav Food Caters exterior" />
-          <div class="image-tag">DINE • TAKE AWAY • ENJOY</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="menu section" id="menu">
-      <div class="container">
-        <div class="section-head">
-          <div><p class="eyebrow">Madhav Food Caters</p><h2>Explore the menu</h2></div>
-        </div>
-        <div class="category-grid" id="categoryGrid"></div>
-        <div class="full-menu-card"><div><p class="eyebrow">Original menu</p><h3>View the complete Madhav Food Caters menu</h3><p>Your current menu with all listed dishes and prices.</p></div><button class="btn btn-dark" id="viewFullMenu">View Full Menu ↗</button></div>
-      </div>
-    </section>
-
-    <section class="menu-showcase section alt" id="menu-showcase">
-      <div class="container">
-        <div class="section-head">
-          <div><p class="eyebrow">Our dishes</p><h2>Choose what you are craving</h2></div>
-          <p>Real dishes and prices from your Madhav Food Caters menu. Food photographs can be added category-by-category.</p>
-        </div>
-        <div class="dish-grid" id="dishGrid"></div>
-      </div>
-    </section>
-
-<section class="stay section" id="stay">
-  <div class="container">
-
-    <div class="stay-heading">
-      <div>
-        <p class="eyebrow">MADHAV VILLAS</p>
-        <h2>Stay. Relax. <span>Feel at Home.</span></h2>
-      </div>
-
-      <div class="stay-heading-line"></div>
-    </div>
-
-    <div class="stay-showcase">
-
-      <!-- LEFT: Overlapping Image Gallery -->
-      <div class="stay-visual">
-
-        <div class="stay-image main-image">
-          <img
-            src="assets/room-enhanced.png"
-            alt="Madhav Villas double bed room"
-          />
-        </div>
-
-        <div class="stay-image image-two">
-          <img
-            src="assets/room-wide.jpg"
-            alt="Madhav Villas room view"
-          />
-        </div>
-
-        <div class="stay-image image-three">
-          <img
-            src="assets/room-ac-enhanced.png"
-            alt="Madhav Villas air conditioned room"
-          />
-        </div>
-
-        <div class="stay-image image-four">
-          <img
-            src="assets/bathroom-enhanced.png"
-            alt="Attached washroom at Madhav Villas"
-          />
-        </div>
-
-      </div>
-
-
-      <!-- RIGHT: Room Information -->
-      <div class="stay-info">
-
-        <p class="eyebrow">YOUR STAY AT MADHAV</p>
-
-        <h3>
-          Comfortable rooms,
-          <em>made for a restful stay.</em>
-        </h3>
-
-        <p class="stay-description">
-          After a delicious meal or a long journey, settle into a comfortable
-          room at Madhav Villas — conveniently located at Madhav Foods on
-          NH-2 near Rajive Academy, Mathura.
-        </p>
-
-        <div class="stay-divider"></div>
-
-        <div class="stay-amenities">
-
-          <div class="stay-amenity">
-            <div class="stay-amenity-icon">❄</div>
-            <div>
-              <strong>Air Conditioning</strong>
-              <span>Cool & comfortable</span>
-            </div>
-          </div>
-
-          <div class="stay-amenity">
-            <div class="stay-amenity-icon">🛏</div>
-            <div>
-              <strong>Double Bed</strong>
-              <span>Comfortable sleeping space</span>
-            </div>
-          </div>
-
-          <div class="stay-amenity">
-            <div class="stay-amenity-icon">🚿</div>
-            <div>
-              <strong>Attached Washroom</strong>
-              <span>Private & convenient</span>
-            </div>
-          </div>
-
-          <div class="stay-amenity">
-            <div class="stay-amenity-icon">📞</div>
-            <div>
-              <strong>Direct Booking</strong>
-              <span>Enquire with us directly</span>
-            </div>
-          </div>
-
-        </div>
-
-        <a class="btn btn-light stay-btn" href="#booking">
-          Enquire About a Room
-          <span>→</span>
-        </a>
-
-      </div>
-
-    </div>
-
+<header class="site-header" id="top">
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Madhav Food Caters home">
+      <span class="brand-mark">MF</span>
+      <span><strong>Madhav Food Caters</strong><small>at Madhav Villas • Mathura</small></span>
+    </a>
+    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#experience">Dine In</a>
+      <a href="#takeaway">Take Away</a>
+      <a href="#menu">Menu</a>
+      <a href="#stay">Stay</a>
+      <a href="#restaurant-gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-small" href="#stay">Rooms</a>
+    </nav>
   </div>
-</section>
+</header>
 
-
-    <section class="booking section dark" id="booking">
-      <div class="container booking-card">
-        <div>
-          <p class="eyebrow">Room enquiry</p>
-          <h2>Planning a stay?</h2>
-          <p>Send your dates and guest details directly on WhatsApp. Availability is confirmed by the property.</p>
-        </div>
-        <form id="bookingForm">
-          <div class="field-row"><label>Name<input id="name" required placeholder="Your name"></label><label>Phone<input id="phone" required placeholder="Your phone"></label></div>
-          <div class="field-row"><label>Check-in<input id="checkin" type="date" required></label><label>Check-out<input id="checkout" type="date" required></label></div>
-          <label>Guests<select id="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select></label>
-          <label>Message<textarea id="message" rows="3" placeholder="Any requirement?"></textarea></label>
-          <button class="btn btn-gold full" type="submit">Send Room Enquiry on WhatsApp</button>
-        </form>
+<main>
+  <section class="hero" id="home">
+    <img class="hero-image" src="assets/restaurant-hero.jpg" alt="Madhav Food Caters restaurant at night">
+    <div class="hero-overlay"></div>
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <p class="eyebrow">MADHAV VILLAS • MATHURA</p>
+      <h1>Madhav Food<br><em>Caters</em></h1>
+      <p class="hero-copy">Brij ka swad, served with warmth. Dine in, take away, or order your favourites online.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#experience">Dine In</a>
+        <a class="btn btn-ghost" href="#takeaway">Take Away</a>
       </div>
-    </section>
-
-    
-
-    <section class="restaurant-gallery section dark" id="restaurant-gallery">
-  <div class="container">
-
-    <div class="section-head">
-      <div>
-        <p class="eyebrow">Madhav Food Caters</p>
-        <h2>Restaurant Gallery</h2>
-      </div>
-      <p>Experience the warm and welcoming atmosphere at Madhav Food Caters.</p>
+      <div class="hero-meta"><span>● Open for Dine-in</span><span>● Takeaway Available</span><span>● Zomato</span></div>
     </div>
+    <a class="scroll-cue" href="#experience">Explore ↓</a>
+  </section>
 
-    <div class="restaurant-grid-gallery">
-
-      <!-- Restaurant Photo 01 -->
-      <button class="restaurant-photo featured">
-        <img
-          src="assets/restaurant-hero.jpg"
-          alt="Madhav Food Caters exterior"
-        />
-      </button>
-
-      <!-- Restaurant Photo 02 -->
-      <button class="restaurant-photo">
-        <img
-          src="assets/p2.jpeg"
-          alt="Madhav Food Caters restaurant"
-        />
-      </button>
-
-      <!-- Restaurant Photo 03 -->
-      <button class="restaurant-photo">
-        <img
-          src="assets/p4.jpeg"
-          alt="Madhav Food Caters dining area"
-        />
-      </button>
-
-      <!-- Restaurant Photo 04 -->
-      <button class="restaurant-photo">
-        <img
-          src="assets/p5.jpeg"
-          alt="Madhav Food Caters"
-        />
-      </button>
-
-      <!-- Restaurant Photo 05 -->
-      <button class="restaurant-photo">
-        <img
-          src="assets/p6.jpeg"
-          alt="Madhav Food Caters dining"
-        />
-      </button>
-
-    </div>
-  </div>
-</section>
-
-
-<section class="contact section" id="contact">
-  <div class="container">
-
-    <div class="contact-top">
-      <div>
-        <p class="eyebrow">VISIT MADHAV VILLAS</p>
-
-        <h2>
-          Come hungry.
-          <span>Leave happy.</span>
-        </h2>
-
-        <p class="lead">
-          Madhav Food Caters at Madhav Villas brings together delicious food,
-          comfortable rooms and a convenient location on NH-2.
-        </p>
-      </div>
-
-      <div class="contact-location">
-        <span class="location-pin">⌖</span>
-        <div>
-          <small>OUR LOCATION</small>
-          <strong>Madhav Foods, NH-2</strong>
-          <p>Near Rajive Academy, Mathura, Uttar Pradesh – 281001</p>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="contact-layout">
-
-      <!-- GOOGLE MAP -->
-      <div class="map-card">
-
-        <div class="map-label">
-          <span class="map-dot"></span>
-          Madhav Food Caters
-        </div>
-
-        <iframe
-          src="https://www.google.com/maps?q=Madhav%20Foods%20NH-2%20Near%20Rajive%20Academy%20Mathura%20Uttar%20Pradesh%20281001&output=embed"
-          width="100%"
-          height="100%"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-
-        <a
-          class="map-open"
-          href="https://www.google.com/maps/search/?api=1&query=Madhav%20Foods%20NH-2%20Near%20Rajive%20Academy%20Mathura%20Uttar%20Pradesh%20281001"
-          target="_blank"
-          rel="noopener">
-          Open in Google Maps
-          <span>↗</span>
-        </a>
-
-      </div>
-
-
-      <!-- CONTACT ACTIONS -->
-      <div class="contact-side">
-
-        <p class="contact-side-label">GET IN TOUCH</p>
-
-        <h3>
-          We'd love to
-          <em>hear from you.</em>
-        </h3>
-
-        <p class="contact-side-text">
-          Planning a meal, booking a room or simply need directions?
-          Reach out to us directly.
-        </p>
-
-
-        <!-- CALL -->
-        <a
-          class="contact-action call-action"
-          href="tel:+919837283666">
-
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2
-                19.79 19.79 0 0 1-8.63-3.07
-                19.5 19.5 0 0 1-6-6
-                19.79 19.79 0 0 1-3.07-8.67
-                A2 2 0 0 1 4.11 2h3
-                a2 2 0 0 1 2 1.72
-                12.84 12.84 0 0 0 .7 2.81
-                2 2 0 0 1-.45 2.11L8.09 9.91
-                a16 16 0 0 0 6 6l1.27-1.27
-                a2 2 0 0 1 2.11-.45
-                12.84 12.84 0 0 0 2.81.7
-                A2 2 0 0 1 22 16.92z">
-              </path>
-            </svg>
-          </div>
-
-          <div class="contact-action-text">
-            <small>CALL US</small>
-            <strong>+91 98372 83666</strong>
-          </div>
-
-          <span class="contact-arrow">→</span>
-
-        </a>
-
-
-        <!-- WHATSAPP -->
-        <a
-          class="contact-action whatsapp-action"
-          href="https://wa.me/919837283666"
-          target="_blank"
-          rel="noopener">
-
-          <div class="contact-icon whatsapp-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0
-                C5.55 0 .24 5.31.24 11.84
-                c0 2.09.55 4.13 1.6 5.93L.14 24
-                l6.37-1.67a11.8 11.8 0 0 0 5.57 1.42h.01
-                c6.53 0 11.84-5.31 11.84-11.84
-                0-3.17-1.23-6.15-3.41-8.43z
-                M12.09 21.72h-.01
-                a9.84 9.84 0 0 1-5.02-1.37l-.36-.21-3.78.99
-                1.01-3.68-.23-.38
-                a9.84 9.84 0 1 1 8.39 4.65z">
-              </path>
-
-              <path
-                d="M17.48 14.31c-.3-.15-1.77-.87-2.04-.97
-                -.27-.1-.47-.15-.67.15
-                -.2.3-.77.97-.94 1.17
-                -.17.2-.35.22-.65.07
-                -.3-.15-1.27-.47-2.42-1.5
-                -.89-.79-1.49-1.77-1.67-2.07
-                -.17-.3-.02-.46.13-.61
-                .13-.13.3-.35.45-.52
-                .15-.17.2-.3.3-.5
-                .1-.2.05-.37-.02-.52
-                -.07-.15-.67-1.62-.92-2.22
-                -.24-.58-.49-.5-.67-.51
-                h-.57c-.2 0-.52.07-.79.37
-                -.27.3-1.04 1.02-1.04 2.49
-                0 1.47 1.07 2.89 1.22 3.09
-                .15.2 2.1 3.21 5.09 4.5
-                .71.31 1.27.5 1.7.64
-                .71.23 1.36.2 1.87.12
-                .57-.08 1.77-.72 2.02-1.42
-                .25-.7.25-1.3.17-1.42
-                -.07-.12-.27-.2-.57-.35z">
-              </path>
-            </svg>
-          </div>
-
-          <div class="contact-action-text">
-            <small>WHATSAPP</small>
-            <strong>Message us directly</strong>
-          </div>
-
-          <span class="contact-arrow">→</span>
-
-        </a>
-
-
-        <!-- DIRECTIONS -->
-        <a
-          class="directions-link"
-          href="https://www.google.com/maps/search/?api=1&query=Madhav%20Foods%20NH-2%20Near%20Rajive%20Academy%20Mathura%20Uttar%20Pradesh%20281001"
-          target="_blank"
-          rel="noopener">
-
-          <span>Get directions to Madhav Foods</span>
-          <span>↗</span>
-
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-
- <footer class="site-footer">
-
+  <!-- RESTAURANT EXPERIENCE -->
+  <section class="experience section" id="experience">
     <div class="container">
+      <div class="section-head centered">
+        <p class="eyebrow">Choose your experience</p>
+        <h2>Eat here. Take it with you. Stay awhile.</h2>
+        <p>One destination for food and a comfortable stay on NH-2.</p>
+      </div>
 
-        <div class="footer-main">
+      <div class="experience-grid">
+        <a class="experience-card dine" href="#menu">
+          <div class="experience-top">
+            <span class="card-number">01</span>
+            <span class="experience-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 2v7a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V2"/><path d="M8 2v20"/><path d="M18 2c-2.2 0-4 2.2-4 6v5c0 1.1.9 2 2 2h2Z"/><path d="M18 15v7"/></svg>
+            </span>
+          </div>
+          <div>
+            <p class="eyebrow">Restaurant</p>
+            <h3>Dine In</h3>
+            <p>Enjoy a freshly prepared meal at Madhav Food Caters.</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
 
-            <!-- BRAND -->
-            <div class="footer-brand">
-                <a href="#" class="footer-logo">Madhav <span>Food Caters</span></a>
+        <a class="experience-card take" href="#takeaway">
+          <div class="experience-top">
+            <span class="card-number">02</span>
+            <span class="experience-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6 8 4.5 21h15L18 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><path d="M8.5 11a3.5 3.5 0 0 0 7 0"/></svg>
+            </span>
+          </div>
+          <div>
+            <p class="eyebrow">On the go</p>
+            <h3>Take Away</h3>
+            <p>Pick up your favourites or order online through Zomato.</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
 
-                <p>
-                    Authentic Brij flavours, comfortable stays
-                    and warm hospitality in Mathura.
-                </p>
+        <a class="experience-card stay-card" href="#stay">
+          <div class="experience-top">
+            <span class="card-number">03</span>
+            <span class="experience-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 18v-9"/><path d="M21 18v-4a3 3 0 0 0-3-3h-7a2 2 0 0 0-2 2v5"/><path d="M3 18h18"/><path d="M6 14h4"/></svg>
+            </span>
+          </div>
+          <div>
+            <p class="eyebrow">Madhav Villas</p>
+            <h3>Stay With Us</h3>
+            <p>Comfortable rooms with AC and attached washroom.</p>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-                <div class="footer-tagline">
-                    <span>बृज का स्वाद</span>
-                    <i>•</i>
-                    <span>Stay • Dine • Relax</span>
-                </div>
-            </div>
+  <section class="takeaway section dark" id="takeaway">
+    <div class="container takeaway-grid">
+      <div class="takeaway-copy">
+        <p class="eyebrow">Take Away • Online Order</p>
+        <h2>Your favourites,<br><em>wherever you are.</em></h2>
+        <p>Browse the menu, choose what you want, and order Madhav Food Caters through Zomato.</p>
+        <a class="btn btn-gold" href="https://www.zomato.com/vrindavan/madhav-foods-vrindavan-locality-vrindavan/order" target="_blank" rel="noopener">Order on Zomato ↗</a>
+      </div>
+      <div class="takeaway-image-wrap">
+        <img src="assets/restaurant-hero.jpg" alt="Madhav Food Caters exterior">
+        <div class="image-tag">DINE • TAKE AWAY • ENJOY</div>
+      </div>
+    </div>
+  </section>
 
-
-            <!-- QUICK LINKS -->
-            <div class="footer-column">
-                <h4>Explore</h4>
-
-                <a href="#menu">Menu</a>
-                <a href="#stay">Madhav Villas</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-            </div>
-
-
-            <!-- CONTACT -->
-            <div class="footer-column">
-                <h4>Contact</h4>
-
-                <a href="tel:+919837283666">+91 98372 83666</a>
-
-                <p>
-                    NH-2, Near Rajive Academy<br>
-                    Mathura, Uttar Pradesh
-                </p>
-
-                <a
-                    class="footer-direction"
-                    href="https://www.google.com/maps/search/?api=1&query=Madhav%20Foods%20NH-2%20Near%20Rajive%20Academy%20Mathura%20Uttar%20Pradesh%20281001"
-                    target="_blank"
-                    rel="noopener">
-                    Get Directions ↗
-                </a>
-            </div>
-
+  <!-- MENU -->
+  <section class="menu section" id="menu">
+    <div class="container">
+      <div class="menu-image-showcase">
+        <div class="menu-showcase-heading">
+          <div>
+            <p class="eyebrow">OUR COMPLETE MENU</p>
+            <h3>Something delicious <em>for everyone.</em></h3>
+          </div>
+          <p>Browse all five menu pages below. Tap any page to view it larger.</p>
         </div>
 
+        <div class="menu-images-grid">
+          <button class="menu-image-card menu-image-large" type="button" data-menu-image="assets/menu/menu-01.jpeg" aria-label="Open menu page 1">
+            <img src="assets/menu/menu-01.jpeg" alt="Madhav Food Caters menu page 1" loading="lazy">
+            <span class="menu-image-overlay"><span>Menu 01</span><strong>↗</strong></span>
+          </button>
 
-        <!-- FOOTER BOTTOM -->
+          <button class="menu-image-card" type="button" data-menu-image="assets/menu/menu-02.jpg" aria-label="Open menu page 2">
+            <img src="assets/menu/menu-02.jpg" alt="Madhav Food Caters menu page 2" loading="lazy">
+            <span class="menu-image-overlay"><span>Menu 02</span><strong>↗</strong></span>
+          </button>
 
-        <div class="footer-bottom">
+          <button class="menu-image-card" type="button" data-menu-image="assets/menu/menu-03.jpeg" aria-label="Open menu page 3">
+            <img src="assets/menu/menu-03.jpeg" alt="Madhav Food Caters menu page 3" loading="lazy">
+            <span class="menu-image-overlay"><span>Menu 03</span><strong>↗</strong></span>
+          </button>
 
-            <p>
-                © <span id="year"></span> Madhav Food Caters • Madhav Villas
-            </p>
+          <button class="menu-image-card" type="button" data-menu-image="assets/menu/menu-04.jpeg" aria-label="Open menu page 4">
+            <img src="assets/menu/menu-04.jpeg" alt="Madhav Food Caters menu page 4" loading="lazy">
+            <span class="menu-image-overlay"><span>Menu 04</span><strong>↗</strong></span>
+          </button>
 
-            <div class="footer-social">
-                <a href="tel:+919837283666" aria-label="Call Madhav Food Caters">
-                    Call
-                </a>
-
-                <a
-                    href="https://wa.me/919837283666"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="WhatsApp Madhav Food Caters">
-                    WhatsApp
-                </a>
-            </div>
-
-            <p class="footer-made">
-                Mathura, Uttar Pradesh
-            </p>
-
+          <button class="menu-image-card" type="button" data-menu-image="assets/menu/menu-05.jpeg" aria-label="Open menu page 5">
+            <img src="assets/menu/menu-05.jpeg" alt="Madhav Food Caters menu page 5" loading="lazy">
+            <span class="menu-image-overlay"><span>Menu 05</span><strong>↗</strong></span>
+          </button>
         </div>
 
+        <div class="menu-bottom-note"><strong>5 menu pages</strong><span>•</span><span>Tap any image to enlarge</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESTAURANT GALLERY: kept before stay so restaurant section finishes first -->
+  <section class="restaurant-gallery section dark" id="restaurant-gallery">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">MADHAV FOOD CATERS</p>
+          <h2>Restaurant Gallery</h2>
+        </div>
+        <p>Experience the warm and welcoming atmosphere at Madhav Food Caters.</p>
+      </div>
+
+      <div class="restaurant-grid-gallery">
+        <button class="restaurant-photo featured" type="button" data-img="assets/restaurant-hero.jpg" aria-label="Open restaurant exterior">
+          <img src="assets/restaurant-hero.jpg" alt="Madhav Food Caters exterior">
+        </button>
+        <button class="restaurant-photo" type="button" data-img="assets/p2.jpeg" aria-label="Open restaurant photo">
+          <img src="assets/p2.jpeg" alt="Madhav Food Caters restaurant">
+        </button>
+        <button class="restaurant-photo" type="button" data-img="assets/p4.jpeg" aria-label="Open dining area photo">
+          <img src="assets/p4.jpeg" alt="Madhav Food Caters dining area">
+        </button>
+        <button class="restaurant-photo" type="button" data-img="assets/p5.jpeg" aria-label="Open restaurant photo">
+          <img src="assets/p5.jpeg" alt="Madhav Food Caters">
+        </button>
+        <button class="restaurant-photo" type="button" data-img="assets/p6.jpeg" aria-label="Open dining photo">
+          <img src="assets/p6.jpeg" alt="Madhav Food Caters dining">
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAY: starts only after the restaurant section is complete -->
+  <section class="stay section" id="stay">
+    <div class="container">
+      <div class="stay-heading">
+        <div>
+          <p class="eyebrow">MADHAV VILLAS</p>
+          <h2>Stay. Relax. <span>Feel at Home.</span></h2>
+        </div>
+        <div class="stay-heading-line"></div>
+      </div>
+
+      <div class="stay-showcase">
+        <div class="stay-visual">
+          <div class="stay-image main-image"><img src="assets/room-enhanced.png" alt="Madhav Villas double bed room"></div>
+          <div class="stay-image image-two"><img src="assets/room-wide.jpg" alt="Madhav Villas room view"></div>
+          <div class="stay-image image-three"><img src="assets/room-ac-enhanced.png" alt="Madhav Villas air conditioned room"></div>
+          <div class="stay-image image-four"><img src="assets/bathroom-enhanced.png" alt="Attached washroom at Madhav Villas"></div>
+          <!-- <div class="stay-photo-count"><span>04</span><small>ROOM<br>VIEWS</small></div> -->
+        </div>
+
+        <div class="stay-info">
+          <p class="eyebrow">YOUR STAY AT MADHAV</p>
+          <h3>Comfortable rooms, <em>made for a restful stay.</em></h3>
+          <p class="stay-description">After a delicious meal or a long journey, settle into a comfortable room at Madhav Villas — conveniently located at Madhav Foods on NH-2 near Rajiv Academy, Mathura.</p>
+          <div class="stay-divider"></div>
+
+          <div class="stay-amenities">
+            <div class="stay-amenity"><div class="stay-amenity-icon">❄</div><div><strong>Air Conditioning</strong><span>Cool & comfortable</span></div></div>
+            <div class="stay-amenity"><div class="stay-amenity-icon">🛏</div><div><strong>Double Bed</strong><span>Comfortable sleeping space</span></div></div>
+            <div class="stay-amenity"><div class="stay-amenity-icon">🚿</div><div><strong>Attached Washroom</strong><span>Private & convenient</span></div></div>
+            <div class="stay-amenity"><div class="stay-amenity-icon">📞</div><div><strong>Direct Booking</strong><span>Enquire with us directly</span></div></div>
+          </div>
+
+          <a class="btn btn-light stay-btn" href="#booking">Enquire About a Room <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking section dark" id="booking">
+    <div class="container booking-card">
+      <div>
+        <p class="eyebrow">Room enquiry</p>
+        <h2>Planning a stay?</h2>
+        <p>Send your dates and guest details directly on WhatsApp. Availability is confirmed by the property.</p>
+      </div>
+      <form id="bookingForm">
+        <div class="field-row"><label>Name<input id="name" required placeholder="Your name"></label><label>Phone<input id="phone" required placeholder="Your phone"></label></div>
+        <div class="field-row"><label>Check-in<input id="checkin" type="date" required></label><label>Check-out<input id="checkout" type="date" required></label></div>
+        <label>Guests<select id="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select></label>
+        <label>Message<textarea id="message" rows="3" placeholder="Any requirement?"></textarea></label>
+        <button class="btn btn-gold full" type="submit">Send Room Enquiry on WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-top">
+        <div>
+          <p class="eyebrow">VISIT MADHAV VILLAS</p>
+          <h2>Come hungry. <span>Leave happy.</span></h2>
+          <p class="lead">Madhav Food Caters at Madhav Villas brings together delicious food, comfortable rooms and a convenient location on NH-2.</p>
+        </div>
+        <div class="contact-location">
+          <span class="location-pin">⌖</span>
+          <div><small>OUR LOCATION</small><strong>Madhav Foods, NH-2</strong><p>Near Rajive Academy, Mathura, Uttar Pradesh – 281001</p></div>
+        </div>
+      </div>
+
+      <div class="contact-layout">
+        <div class="map-card">
+          <div class="map-label"><span class="map-dot"></span>Madhav Food Caters</div>
+          <iframe src="https://www.google.com/maps?q=Madhav%20Foods%20NH-2%20Near%20Rajive%20Academy%20Mathura%20Uttar%20Pradesh%20281001&output=embed" title="Map showing Madhav Food Caters" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a class="map-open" href="https://www.google.com/maps/search/?api=1&query=Madhav%20Foods%20NH-2%20Near%20Rajive%20Academy%20Mathura%20Uttar%20Pradesh%20281001" target="_blank" rel="noopener">Open in Google Maps <span>↗</span></a>
+        </div>
+
+        <div class="contact-side">
+          <p class="contact-side-label">GET IN TOUCH</p>
+          <h3>We'd love to <em>hear from you.</em></h3>
+          <p class="contact-side-text">Planning a meal, booking a room or simply need directions? Reach out to us directly.</p>
+
+          <a class="contact-action" href="tel:+919837283666">
+            <div class="contact-icon"><span>☎</span></div>
+            <div class="contact-action-text"><small>CALL US</small><strong>+91 98372 83666</strong></div>
+            <span class="contact-arrow">→</span>
+          </a>
+
+          <a class="contact-action whatsapp-action" href="https://wa.me/919837283666" target="_blank" rel="noopener">
+            <div class="contact-icon whatsapp-icon"><span>◔</span></div>
+            <div class="contact-action-text"><small>WHATSAPP</small><strong>Message us directly</strong></div>
+            <span class="contact-arrow">→</span>
+          </a>
+
+          <a class="directions-link" href="https://www.google.com/maps/search/?api=1&query=Madhav%20Foods%20NH-2%20Near%20Rajive%20Academy%20Mathura%20Uttar%20Pradesh%20281001" target="_blank" rel="noopener"><span>Get directions to Madhav Foods</span><span>↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="#top" class="footer-logo">Madhav <span>Food Caters</span></a>
+        <p>Authentic Brij flavours, comfortable stays and warm hospitality in Mathura.</p>
+        <div class="footer-tagline"><span>बृज का स्वाद</span><i>•</i><span>Stay • Dine • Relax</span></div>
+      </div>
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <a href="#menu">Menu</a><a href="#stay">Madhav Villas</a><a href="#restaurant-gallery">Gallery</a><a href="#contact">Contact</a>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <a href="tel:+919837283666">+91 98372 83666</a>
+        <p>NH-2, Near Rajive Academy<br>Mathura, Uttar Pradesh</p>
+        <a class="footer-direction" href="https://www.google.com/maps/search/?api=1&query=Madhav%20Foods%20NH-2%20Near%20Rajive%20Academy%20Mathura%20Uttar%20Pradesh%20281001" target="_blank" rel="noopener">Get Directions ↗</a>
+      </div>
     </div>
 
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Madhav Food Caters • Madhav Villas</p>
+      <div class="footer-social"><a href="tel:+919837283666">Call</a><a href="https://wa.me/919837283666" target="_blank" rel="noopener">WhatsApp</a></div>
+      <p class="footer-made">Mathura, Uttar Pradesh</p>
+    </div>
+  </div>
 </footer>
 
-
 <div class="mobile-bar">
-    <a href="tel:+919837283666">Call</a>
-    <a
-        href="https://wa.me/919837283666"
-        target="_blank"
-        rel="noopener">
-        WhatsApp
-    </a>
-    <a href="#menu">Menu</a>
-    <a href="#stay">Stay</a>
+  <a href="tel:+919837283666">Call</a>
+  <a href="https://wa.me/919837283666" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="#menu">Menu</a>
+  <a href="#stay">Stay</a>
 </div>
 
-
 <dialog id="lightbox">
-    <button id="closeLightbox" aria-label="Close image">×</button>
-    <img id="lightboxImg" alt="">
+  <button id="closeLightbox" aria-label="Close image">×</button>
+  <img id="lightboxImg" alt="">
 </dialog>
 
 <script src="script.js"></script>
